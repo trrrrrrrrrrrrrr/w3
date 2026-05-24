@@ -2,7 +2,6 @@
 require_once 'db.php';
 
 header('Content-Type: text/html; charset=UTF-8');
-session_start();
 
 $form_data = [
     'full_name' => '', 'phone' => '', 'email' => '', 'birth_date' => '',
@@ -38,7 +37,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (empty($form_data['phone'])) {
         $errors['phone'] = 'Телефон обязателен.';
     } else {
-        $digits = preg_replace('/\D/', '', $form_data['phone']); // оставляем только цифры
+        $digits = preg_replace('/\D/', '', $form_data['phone']);
         $digitCount = strlen($digits);
         if ($digitCount < 10 || $digitCount > 12) {
             $errors['phone'] = 'Номер телефона должен содержать от 10 до 12 цифр (например, +7 918 463-42-21).';

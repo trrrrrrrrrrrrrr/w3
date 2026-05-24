@@ -34,10 +34,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $errors['full_name'] = 'ФИО не должно превышать 150 символов.';
     }
 
+    // Телефон – проверка количества цифр (10–12 цифр)
     if (empty($form_data['phone'])) {
         $errors['phone'] = 'Телефон обязателен.';
-    } elseif (!preg_match('/^[\d\s\-\+\(\)]{6,12}$/', $form_data['phone'])) {
-        $errors['phone'] = 'Телефон должен содержать от 6 до 12 символов (допустимы +, -, (, ), пробел).';
+    } else {
+        $digits = preg_replace('/\D/', '', $form_data['phone']); // оставляем только цифры
+        $digitCount = strlen($digits);
+        if ($digitCount < 10 || $digitCount > 12) {
+            $errors['phone'] = 'Номер телефона должен содержать от 10 до 12 цифр (например, +7 918 463-42-21).';
+        }
     }
 
     if (empty($form_data['email'])) {

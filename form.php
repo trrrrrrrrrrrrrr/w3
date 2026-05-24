@@ -12,7 +12,7 @@
 <div class="form-wrapper">
     <div class="form-card">
         <div class="form-header">
-            <h1>📋 Регистрационная анкета</h1>
+            <h1> Регистрационная анкета</h1>
             <p>Заполните все поля – мы сохраним ваши данные в безопасной базе</p>
         </div>
 
@@ -47,7 +47,7 @@
                 <input type="tel" id="phone" name="phone" 
                        value="<?= htmlspecialchars($form_data['phone']) ?>" 
                        placeholder="+7 (123) 456-78-90" required>
-                <div class="field-hint">Формат: 6–12 цифр, допускаются +, -, (, ), пробелы</div>
+                    <div class="field-hint">Формат: +7 (XXX) XXX-XX-XX </div>
             </div>
 
             <!-- Email -->
@@ -87,7 +87,7 @@
                         </option>
                     <?php endforeach; ?>
                 </select>
-                <div class="field-hint">Зажмите Ctrl (Cmd) для выбора нескольких</div>
+                <div class="field-hint">Зажмите Ctrl  для выбора нескольких</div>
             </div>
 
             <!-- Биография -->
@@ -112,7 +112,6 @@
 
         <div class="footer-links">
             <a href="v.php">📊 Просмотр сохранённых анкет</a>
-            <a href="https://github.com/trrrrrrrrrrrrrr/w2" target="_blank">🔗 Репозиторий Git</a>
         </div>
     </div>
 </div>

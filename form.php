@@ -13,7 +13,7 @@
     <div class="form-card">
         <div class="form-header">
             <h1> Регистрационная анкета</h1>
-            <p>Заполните все поля – мы сохраним ваши данные в безопасной базе</p>
+            
         </div>
 
         <?php if ($success_message): ?>
@@ -107,11 +107,12 @@
                 </label>
             </div>
 
-            <button type="submit" class="submit-btn">💾 Сохранить анкету</button>
+            <button type="submit" class="submit-btn"> Сохранить анкету</button>
         </form>
 
         <div class="footer-links">
-            <a href="v.php">📊 Просмотр сохранённых анкет</a>
+            <a href="v.php"> Просмотр сохранённых анкет</a>
+            <a href="p.html"> Этапы выполнения (Работа с БД)</a>
         </div>
     </div>
 </div>

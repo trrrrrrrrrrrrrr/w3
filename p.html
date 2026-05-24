@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Этапы выполнения </title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        
+        .back-link {
+            text-align: center;
+            margin-top: 30px;
+            margin-bottom: 20px;
+        }
+        .back-link a {
+            background: #e8dfd9;
+            color: #5f4b8b;
+            padding: 8px 25px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-block;
+        }
+        .back-link a:hover {
+            background: #d9cfe8;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <header>
+        <h1>Лабораторная работа №3</h1>
+        
+    </header>
+
+  
+    <section class="task">
+        <h2>1. Подготовка окружения</h2>
+        <div class="step">
+            <h3>Создание каталога и подключение к MySQL</h3>
+            <div class="desc">
+                <p>Создан каталог <code>~/www/w3</code> для размещения файлов лабораторной работы.<br>
+                Затем выполнен вход в MySQL под своим пользователем (<code>u82358</code>).</p>
+            </div>
+            <div class="screenshot">
+                <img src="1.png" alt="Настройки PuTTY">
+                <div class="caption">Скриншот 1: Настройки PuTTY</div>
+            </div>
+            <div class="screenshot">
+                <img src="2.png" alt="Вход в MySQL">
+                <div class="caption">Скриншот 2: Подключение к MySQL</div>
+            </div>
+            <div class="screenshot">
+                <img src="3.png" alt="Выбор базы данных">
+                <div class="caption">Скриншот 3: Выбор базы данных u82358</div>
+            </div>
+        </div>
+    </section>
+
+    
+    <section class="task">
+        <h2>2. Создание таблиц базы данных</h2>
+        <div class="step">
+            <div class="desc">
+                <p>В соответствии с заданием созданы три таблицы:</p>
+                <ul>
+                    <li><code>application</code> – основные данные анкеты</li>
+                    <li><code>language</code> – справочник языков программирования</li>
+                    <li><code>application_language</code> – связующая таблица (многие ко многим)</li>
+                </ul>
+                <p>Таблицы созданы с учётом 3-й нормальной формы, внешними ключами и каскадным удалением.<br>
+                В таблицу <code>language</code> добавлены 12 языков из задания.</p>
+            </div>
+            <div class="screenshot">
+                <img src="4.png" alt="Создание таблиц">
+                <div class="caption">Скриншот 4: SQL-запросы создания таблиц и заполнение языков</div>
+            </div>
+        </div>
+    </section>
+
+    
+    <section class="task">
+        <h2>3. Размещение файлов на сервере через Git</h2>
+        <div class="step">
+            <h3>Передача файлов на GitHub и клонирование на сервер</h3>
+            <div class="desc">
+                <p>На локальном компьютере создан репозиторий, добавлены файлы <code>index.php</code>, <code>anketa.php</code>, <code>v.php</code>, <code>style.css</code> и скриншоты. Выполнен push на GitHub.</p>
+                <p>На сервере репозиторий склонирован, файлы скопированы в каталог <code>~/www/w3</code>.</p>
+            </div>
+            <div class="screenshot">
+                <img src="5.png" alt="Передача файлов на GitHub">
+                <div class="caption">Скриншот 5: Отправка файлов на GitHub (git push)</div>
+            </div>
+            <div class="screenshot">
+                <img src="6.png" alt="Клонирование на сервер">
+                <div class="caption">Скриншот 6: Клонирование репозитория и копирование в www/w3</div>
+            </div>
+        </div>
+    </section>
+
+    
+    <section class="task">
+        <h2>4. Проверка сохранения данных</h2>
+        <div class="step">
+            <div class="desc">
+                <p>После отправки тестовой анкеты через форму (<code>index.php</code>) выполнена проверка записей в базе данных. Запись успешно добавлена с корректными полями.</p>
+            </div>
+            <div class="screenshot">
+                <img src="7.png" alt="Проверка записей">
+                <div class="caption">Скриншот 7: SELECT из таблицы application</div>
+            </div>
+        </div>
+    </section>
+
+    
+    <div class="back-link">
+        <a href="index.php">← Вернуться к анкете</a>
+    </div>
+
+   
+</div>
+</body>
+</html>
